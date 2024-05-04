@@ -9,17 +9,31 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const Bool viewontag         = True;     /* Switch view on tag switch */
-static const char *fonts[]          = { "monospace:size=10" };
-static const char dmenufont[]       = "monospace:size=10";
+static const char *fonts[]          = { "JetBrainsMono Nerd Font Mono:size=14",
+										"WenQuanYi Micro Hei Mono:size:14:style=Regular:antialias:true:autohint:true",
+										"JoyPixels:pixelsize:14:style=Regular:antialias:true:autohint:true",
+										"Symbols Nerd Font:pixelsize=14:type=2048-em:antialias:true:autohint:true" };
+static const char dmenufont[]       = "JetBrainsMono Nerd Font Mono:size=14";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#005577";
+#include "themes/nord.h"
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	/*SchemeNorm      普通      */   { "#ffffff", "#333333", "#444444" }, // 
+	/*SchemeSel       选中      */   { red2, "#47575F", "#f09a7f" },      //SchemeSel,    选中的
+	/*SchemeSelGlobal 全局选中  */   { "#ffffff", "#47575F", "#fcf86f" },
+	/*SchemeTabSel    选中tag   */   { red2,    black,  black },
+	/*SchemeTabNorm   普通tag   */   { white,   black,  black },
+	/*SchemeUnderline 下划线    */   { red2, black, black }, 
+	/*SchemeMode      模式      */   { green,   black,  black },
+	/*SchemeHid       隐藏      */   { "#dddddd", NULL, NULL },
+	/*SchemeSystray   托盘      */   { NULL, blue, NULL },
+	/*SchemeNormTag   普通标签  */   { "#aaaaaa", "#333333", NULL },
+	/*SchemeSelTag    选中标签  */   { "#eeeeee", "#333333", NULL },
+	/*SchemeBarEmpty  空白状态栏*/   { "#1e222a", "#1e222a", NULL },
+	/*SchemeOverView  overview  */   { red2, black, black },
 };
 
 /* tagging */
