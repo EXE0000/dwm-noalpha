@@ -99,7 +99,7 @@ static const char *lightdown[]  = { "/home/jh/dwm-noalpha/scripts/lightdown.sh",
 static const char *lightup[]  = { "/home/jh/dwm-noalpha/scripts/lightup.sh", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "70x24", NULL };
-static const char *trayer[] = { "~/dwm-noalpha/scripts/trayer.sh", NULL };
+static const char *trayer[] = { "/home/jh/dwm-noalpha/scripts/trayer.sh", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
