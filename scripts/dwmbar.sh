@@ -68,5 +68,4 @@ darkblue="#7292b2"
 
 while true; do
 	xsetroot -name "^c$black^^b$blue^  ^b$green^ $(print_mem) $(dwm_cpu) ^b$blue^^c$black^ $(dwm_network) ^c$black^^b$green^ $(dwm_battery) ^b$pink^ $(dwm_date) ^b#81A1C1^ $(dwm_alsa)"
-	sleep 0.5
 done
