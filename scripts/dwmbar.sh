@@ -39,7 +39,7 @@ dwm_battery() {
 }
 
 dwm_alsa() {
-	VOL=$(amixer sget Master | grep "Front Left: " | awk '{ print $5 }')
+	VOL=$(amixer sget Master | grep "Front Left: " | awk '{ print $5 }' | awk -F "[" '{ print $2 }' | awk -F ']' '{ print $1 }')
 	printf "🔊 %s" "$VOL"
 }
 
