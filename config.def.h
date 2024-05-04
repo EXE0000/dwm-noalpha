@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 5;        /* border pixel of windows */
 static const unsigned int tabModKey = 0x40;
 static const unsigned int tabCycleKey = 0x17;
 static const unsigned int gappx     = 5;        /* gaps between windows */
