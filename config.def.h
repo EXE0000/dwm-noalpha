@@ -43,11 +43,13 @@ static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 /* launcher commands (They must be NULL terminated) */
 static const char* net[]      = { "microsoft-edge-stable", NULL, NULL };
 static const char* obs[]      = { "obs", NULL, NULL };
+static const char* spectacle[]= { "spectacle", NULL, NULL };
 
 static const Launcher launchers[] = {
        /* command       name to display */
 	{ net,         "edge" },
 	{ obs,         "obs" },
+	{ spectacle,	"spectacle"}
 };
 
 static const Rule rules[] = {
