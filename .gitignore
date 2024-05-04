@@ -1,0 +1,6 @@
+*.orig
+*.rej
+dwm
+drw.o
+dwm.o
+util.o
