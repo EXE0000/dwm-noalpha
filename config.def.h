@@ -99,6 +99,7 @@ static const char *lightdown[]  = { "/home/jh/dwm-noalpha/scripts/lightdown.sh",
 static const char *lightup[]  = { "/home/jh/dwm-noalpha/scripts/lightup.sh", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "70x24", NULL };
+static const char *trayer[] = { "~/dwm-noalpha/script/trayer.sh", NULL }
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -107,6 +108,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_F1,      spawn,          {.v = voltoggle } },
 	{ MODKEY,                       XK_F2,      spawn,          {.v = voldown } },
 	{ MODKEY,                       XK_F3,      spawn,          {.v = volup } },
+	{ MODKEY,                       XK_z,      spawn,          {.v = trayer } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,				XK_p,      spawn,          {.v = roficmd } },
 	{ MODKEY,             XK_Return, spawn,          {.v = termcmd } },
