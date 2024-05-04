@@ -27,10 +27,14 @@ static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
 /* launcher commands (They must be NULL terminated) */
 static const char* surf[]      = { "surf", "duckduckgo.com", NULL };
+/* launcher commands (They must be NULL terminated) */
+static const char* net[]      = { "microsoft-edge-stable", NULL, NULL };
+static const char* obs[]      = { "obs", NULL, NULL };
 
 static const Launcher launchers[] = {
        /* command       name to display */
-	{ surf,         "surf" },
+	{ net,         "edge" },
+	{ obs,         "obs" },
 };
 
 static const Rule rules[] = {
