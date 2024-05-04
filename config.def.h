@@ -102,15 +102,8 @@ static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "70x24"
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_F5,      spawn,          {.v = lightdown } },
-	{ MODKEY,                       XK_F6,      spawn,          {.v = lightup } },
-	{ MODKEY,                       XK_F1,      spawn,          {.v = voltoggle } },
-	{ MODKEY,                       XK_F2,      spawn,          {.v = voldown } },
-	{ MODKEY,                       XK_F3,      spawn,          {.v = volup } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
-	{ MODKEY|ShiftMask,				XK_p,      spawn,          {.v = roficmd } },
 	{ MODKEY,             XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY,						XK_a,		spawn,			{.v = alacrittycmd } },
 	{ MODKEY,                       XK_c,		togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY|ShiftMask,             XK_j,      rotatestack,    {.i = +1 } },
