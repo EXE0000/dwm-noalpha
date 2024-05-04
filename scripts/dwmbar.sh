@@ -23,19 +23,19 @@ dwm_battery() {
 	# Change BAT1 to whatever your battery is identified as. Typically BAT0 or BAT1
 	CHARGE=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep "state" | awk '{ print $2 }')
 	STATUS=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep "percentage" | awk '{ print $2 }')
-	printf "🔋$STATUS"
-	# if [ "$CHARGE" = "fully-charged" ]; then
-	# 	printf "🔌%s" "$STATUS"
-	# elif [ "$CHARGE" = "charging" ]; then
-	# 	printf "🔌%s" "$STATUS"
-	# else
-	# 	printf "🔋%s" "$STATUS"
+	# printf "🔋$STATUS"
+	if [ "$CHARGE" = "fully-charged" ]; then
+		printf "🔌%s" "$STATUS"
+	elif [ "$CHARGE" = "charging" ]; then
+		printf "🔌%s" "$STATUS"
+	else
+		printf "🔋%s" "$STATUS"
 	# if [ "$STATUS" = "100%" ]; then
 	#   printf "🔌no 🔋 %s" "$STATUS"
 	# else
 	#   if [ "$CHARGE" = "fully-charged" || "$CHARGE" = "charging" ]; then
-	#     printf "🔌yes 🔋 %s" "$STATUS"
-	# fi
+	#   printf "🔌yes 🔋 %s" "$STATUS"
+	fi
 }
 
 dwm_alsa() {
@@ -75,6 +75,6 @@ orange="#D08770"
 darkblue="#7292b2"
 
 while true; do
-	xsetroot -name "^c$black^^b$blue^  ^b$green^ $(print_mem) $(dwm_cpu) ^b$blue^^c$black^ $(dwm_network) ^c$black^^b$green^ $(dwm_battery) ^b$pink^ $(dwm_date) ^b#81A1C1^ $(dwm_alsa)"
+	xsetroot -name "^c$black^^b$blue^ $USER ^b$green^ $(print_mem) $(dwm_cpu) ^b$blue^^c$black^ $(dwm_network) ^c$black^^b$green^ $(dwm_battery) ^b$pink^ $(dwm_date) ^b#81A1C1^ $(dwm_alsa)"
 	sleep 0.5
 done
