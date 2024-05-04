@@ -41,12 +41,12 @@ static const char *colors[][3]      = {
 static const char *tags[] = { "", "", "", "", "", "", "", "","" };
 
 /* launcher commands (They must be NULL terminated) */
-static const char* net[]      = { "microsoft-edge-stable", NULL, NULL };
+//static const char* net[]      = { "microsoft-edge-stable", NULL, NULL };
 static const char* spectacle[]= { "spectacle", NULL, NULL };
 
 static const Launcher launchers[] = {
        /* command       name to display */
-	{ net,         "edge" },
+//	{ net,         "edge" },
 	{ spectacle,	"spectacle"}
 };
 
