@@ -22,7 +22,7 @@ static const char col_cyan[]        = "#37374f";
 #include "themes/nord.h"
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	/*SchemeNorm      普通      */   { "#00BFFF", "#E6E6FA", "#444444" }, // 
+	/*SchemeNorm      普通      */   { "#E6E6FA", "#00BFFF", "#444444" }, // 
 	/*SchemeSel       选中      */   { red2, "#47575F", "#f09a7f" },      //SchemeSel,    选中的
 	/*SchemeSelGlobal 全局选中  */   { "#ffffff", "#47575F", "#fcf86f" },
 	/*SchemeTabSel    选中tag   */   { red2,    black,  black },
