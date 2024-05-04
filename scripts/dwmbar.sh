@@ -23,18 +23,19 @@ dwm_battery() {
 	# Change BAT1 to whatever your battery is identified as. Typically BAT0 or BAT1
 	CHARGE=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep "state" | awk '{ print $2 }')
 	STATUS=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep "percentage" | awk '{ print $2 }')
-	if [ "$CHARGE" = "fully-charged" ]; then
-		printf "🔌%s" "$STATUS"
-	elif [ "$CHARGE" = "charging" ]; then
-		printf "🔌%s" "$STATUS"
-	else
-		printf "🔋 %s" "$STATUS"
-		# if [ "$STATUS" = "100%" ]; then
-		#   printf "🔌no 🔋 %s" "$STATUS"
-		# else
-		#   if [ "$CHARGE" = "fully-charged" || "$CHARGE" = "charging" ]; then
-		#     printf "🔌yes 🔋 %s" "$STATUS"
-	fi
+	printf "🔋$STATUS"
+	# if [ "$CHARGE" = "fully-charged" ]; then
+	# 	printf "🔌%s" "$STATUS"
+	# elif [ "$CHARGE" = "charging" ]; then
+	# 	printf "🔌%s" "$STATUS"
+	# else
+	# 	printf "🔋%s" "$STATUS"
+	# if [ "$STATUS" = "100%" ]; then
+	#   printf "🔌no 🔋 %s" "$STATUS"
+	# else
+	#   if [ "$CHARGE" = "fully-charged" || "$CHARGE" = "charging" ]; then
+	#     printf "🔌yes 🔋 %s" "$STATUS"
+	# fi
 }
 
 dwm_alsa() {
