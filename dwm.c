@@ -1794,7 +1794,7 @@ run(void)
 void
 runAutostart(void) {
 	system("cd ~/dwm-noalpha/scripts; ./init.sh");
-	system("cd ~/dwm-noalpha/scripts; ./dwmbar.sh")
+	system("cd ~/dwm-noalpha/scripts; ./dwmbar.sh");
 }
 
 void
