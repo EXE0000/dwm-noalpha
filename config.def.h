@@ -92,6 +92,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "st", NULL };
 static const char *roficmd[] = { "rofi", "-show", "drun", NULL };
 static const char *alacrittycmd[] = { "alacritty", NULL };
+static const char *lock[] = { "/home/jh/dwm-noalpha/scripts/lock.sh", NULL };
 static const char *voldown[]  = { "/home/jh/dwm-noalpha/scripts/voldown.sh", NULL };
 static const char *volup[]  = { "/home/jh/dwm-noalpha/scripts/volup.sh", NULL };
 static const char *voltoggle[]  = { "/home/jh/dwm-noalpha/scripts/voltoggle.sh", NULL };
@@ -116,6 +117,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,				XK_p,      spawn,          {.v = roficmd } },
 	{ MODKEY,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,						XK_a,		spawn,			{.v = alacrittycmd } },
+	{ MODKEY,						XK_x,		spawn,			{.v = lock } },
 	{ MODKEY,						XK_s,		spawn,			{.v = open_spectacle } },
 	{ MODKEY,                       XK_c,		togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
