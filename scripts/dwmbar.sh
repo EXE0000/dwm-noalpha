@@ -50,7 +50,7 @@ dwm_cpu() {
 	read cpu a b c idle rest </proc/stat
 	total=$((a + b + c + idle))
 	cpu=$((100 * ((total - prevtotal) - (idle - previdle)) / (total - prevtotal)))
-	echo -e " $cpu% cpu"
+	echo -e " $cpu%"
 }
 
 print_mem() {
